@@ -5,7 +5,7 @@ public class SimpleListNode<T extends Comparable<T>> implements ISimpleListNode<
 
 	@Override
 	public T getElement() {
-
+		return null;
 	}
 
 	@Override
@@ -15,7 +15,7 @@ public class SimpleListNode<T extends Comparable<T>> implements ISimpleListNode<
 
 	@Override
 	public ISimpleListNode<T> getNext() {
-
+		return null;
 	}
 
 	@Override

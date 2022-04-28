@@ -55,7 +55,11 @@ public class Complexity {
 	 * @return same number as couldBeBetter1, but faster
 	 */
 	public static int isDoneBetter1(int n) {
-
+		int result = 0;
+		for (int i = 0; i <= n; i++) {
+			result += 2;
+		}
+		return result;
 	}
 	
 	
@@ -65,6 +69,16 @@ public class Complexity {
 	 * @return same number as couldBeBetter1, but faster
 	 */
 	public static int isDoneBetter2(int n) {
+		int temp = 1;
+		int result = 1;
+		for (int i = 1; i <= n; i++) {
+			result = 0;
+			for (int j = 1; j <= i; j++) {
+				result += temp;
+			}
+			temp = result;
+		}
+		return result;
 
 	}
 
@@ -75,7 +89,9 @@ public class Complexity {
 	 * @return same number as couldBeBetter1, but faster
 	 */
 	public static int isDoneBetter3(int n) {
-
+		if (n < 0) throw new IllegalArgumentException("n has to be positive!");
+		else if (n <= 1) return 1;
+		else return couldBeBetter3(n-1)+ couldBeBetter3(n-2);
 	}
 
 }
