@@ -5,24 +5,27 @@ import org.junit.*;
 
 public class ComplexityTest {
 
+    private static final int[] numbers = {0, 1, 4, 5, 6, 19, 50};
+
     @Test
     public void testFirst() {
-        int n = 19;
+        for (int n: numbers) {
+            assertEquals(Complexity.couldBeBetter1(n), Complexity.isDoneBetter1(n));
+        }
 
-        assertEquals(Complexity.isDoneBetter1(n), Complexity.couldBeBetter1(n));
     }
 
     @Test
     public void testSecond() {
-        int n = 19;
-
-        assertEquals(Complexity.isDoneBetter2(n), Complexity.couldBeBetter2(n));
+        for (int n: numbers) {
+            assertEquals(Complexity.couldBeBetter2(n), Complexity.isDoneBetter2(n));
+        }
     }
 
     @Test
     public void testThird() {
-        int n = 19;
-
-        assertEquals(Complexity.isDoneBetter3(n), Complexity.couldBeBetter3(n));
+        for (int n: numbers) {
+            assertEquals(Complexity.couldBeBetter3(n), Complexity.isDoneBetter3(n));
+        }
     }
 }
