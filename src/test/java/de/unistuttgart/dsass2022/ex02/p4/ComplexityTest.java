@@ -5,7 +5,7 @@ import org.junit.*;
 
 public class ComplexityTest {
 
-    private static final int[] numbers = {0, 1, 4, 5, 6, 19, 50};
+    private static final int[] numbers = {0, 1, 4, 5, 6, 19};
 
     @Test
     public void testFirst() {
