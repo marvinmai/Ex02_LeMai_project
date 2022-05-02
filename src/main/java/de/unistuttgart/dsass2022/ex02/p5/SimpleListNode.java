@@ -5,6 +5,12 @@ public class SimpleListNode<T extends Comparable<T>> implements ISimpleListNode<
 	private T element;
 	private ISimpleListNode<T> next;
 
+	public SimpleListNode() {}
+
+	public SimpleListNode(T element) {
+		this.element = element;
+	}
+
 	@Override
 	public T getElement() {
 		return element;
